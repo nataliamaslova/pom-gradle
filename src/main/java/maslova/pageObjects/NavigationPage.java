@@ -1,5 +1,6 @@
 package maslova.pageObjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 
@@ -11,6 +12,7 @@ public class NavigationPage extends BasePage {
         super(driver, actions);
     }
 
+    @Step("Get subpage url")
     public String getUrl() {
         return NAV_FORM_URL;
     }
