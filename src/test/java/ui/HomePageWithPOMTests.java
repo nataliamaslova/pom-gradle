@@ -1,10 +1,12 @@
 package ui;
 
+import io.qameta.allure.Feature;
 import maslova.pageObjects.HomePage;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@Feature("POM")
 class HomePageWithPOMTests extends BaseTestForPOM {
 
     @Test

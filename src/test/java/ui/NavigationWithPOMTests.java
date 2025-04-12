@@ -1,5 +1,6 @@
 package ui;
 
+import io.qameta.allure.Feature;
 import maslova.pageObjects.HomePage;
 import maslova.pageObjects.NavigationPage;
 import org.junit.jupiter.api.Test;
@@ -8,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static ui.BaseTest.BASE_URL;
 
+@Feature("POM")
 class NavigationWithPOMTests extends BaseTestForPOM {
     @Test
     void openNavFormTest() {

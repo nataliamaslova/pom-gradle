@@ -1,5 +1,6 @@
 package ui;
 
+import io.qameta.allure.Feature;
 import maslova.pageObjects.HomePage;
 import maslova.pageObjects.WebFormPage;
 import org.junit.jupiter.api.Test;
@@ -10,6 +11,7 @@ import org.openqa.selenium.WebElement;
 import static org.junit.jupiter.api.Assertions.*;
 import static ui.BaseTest.BASE_URL;
 
+@Feature("POM")
 class WebFormWithPOMTests extends BaseTestForPOM {
     @Test
     void openWebFormTest() {
@@ -21,6 +23,14 @@ class WebFormWithPOMTests extends BaseTestForPOM {
 
         assertEquals(BASE_URL + webFormUrl, currentUrl);
         assertEquals("Web form", title.getText());
+    }
+
+    @Test
+    void openWebFormWithCheckTest() {
+        HomePage homePage = new HomePage(driver, actions);
+        WebFormPage webFormPage = homePage.openWebFormPage();
+
+        webFormPage.checkIsWebPage();
     }
 
     @Test
