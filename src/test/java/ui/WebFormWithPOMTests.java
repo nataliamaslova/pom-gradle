@@ -18,11 +18,11 @@ class WebFormWithPOMTests extends BaseTestForPOM {
         HomePage homePage = new HomePage(driver, actions);
         WebFormPage webFormPage = homePage.openWebFormPage();
         String currentUrl = webFormPage.getCurrentUrl();
-        WebElement title = webFormPage.getTitle();
+        String title = webFormPage.getTitle();
         String webFormUrl = webFormPage.getUrl();
 
         assertEquals(BASE_URL + webFormUrl, currentUrl);
-        assertEquals("Web form", title.getText());
+        assertEquals("Web form", title);
     }
 
     @Test
