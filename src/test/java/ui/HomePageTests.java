@@ -29,7 +29,8 @@ class HomePageTests extends BaseTest {
             linksCount += links.size();
             for (WebElement link : links) {
                 System.out.println(link.getText());
-                actions.moveToElement(link).click().perform();
+                actions.moveToElement(link).perform();
+                link.click();
                 driver.navigate().back();
             }
         }
