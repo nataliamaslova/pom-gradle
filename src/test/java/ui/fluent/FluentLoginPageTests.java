@@ -6,6 +6,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ui.BaseTest;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 @Feature("Fluent")
 public class FluentLoginPageTests extends BaseTest {
     FluentLoginPage loginPage;
@@ -29,5 +31,14 @@ public class FluentLoginPageTests extends BaseTest {
                 .login("test", "test")
                 .checkInvalidCredentialsBoxPresent()
                 .checkSuccessBoxIsNotPresent();
+    }
+
+    @Test
+    void HeaderTest() {
+        String headerText = loginPage
+                .login("test", "test")
+                .getHeader().getSubTitleText();
+
+        assertEquals("Practice site", headerText);
     }
 }
