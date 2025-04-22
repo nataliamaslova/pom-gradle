@@ -9,7 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.time.Duration;
 
-import static maslova.patterns.WebDriverFactory.createWebDriver;
+import static maslova.patterns.factory.WebDriverFactory.createWebDriver;
 
 public class BaseTest {
     protected WebDriver driver;

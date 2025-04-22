@@ -1,4 +1,4 @@
-package maslova.patterns;
+package maslova.patterns.factory;
 
 import maslova.configs.TestPropertiesConfig;
 import org.aeonbits.owner.ConfigFactory;
